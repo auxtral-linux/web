@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Auxtral GNU/Linux es una distribución basada en Debian 12 Bookworm sin non-free-fermware">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com) - Modificado por Guillermo Sosa para Auxtral">
+	
+	<title>Una configuración "no ortodoxa" de Dolphin en Auxtral GNU/Linux</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class=""><a href="index.html">Home</a></li>
+					<li class=""><a href="acerca.html">Acerca</a></li>
+                    <li class=""><a href="descargas.html">Descargas</a></li>
+                    <li class=""><a href="faqs.html">FAQs</a></li>
+                    <li class=""><a href="oldsite/ayuda.html" target="_blank">Ayuda</a></li>
+                    <li><a href="english/index.html">English</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+    
+    	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="row widget"></div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Script &quot;ospe&quot;<a href="https://sourceforge.net/projects/auxtral-gnu-linux/files/Cinnamon/Auxtral_4-Cinnamon-F-088-230520.iso/download" target="_blank"></a></h4>
+						<p><img src="assets/images/ospe.png" alt=""></p>
+				  </div>
+			  </div>
+				<div class="row widget"></div>
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+		  <article class="col-md-8 maincontent">
+			<header class="page-header">
+					<h1 class="alert-danger">Importante &quot;LEER&quot; </h1>
+				</header>
+				<p>1) En el caso de que al estar <strong>ejecutando el sistema en modo Live</strong> para alguna tarea te llega a pedir <strong>clave de autentificación</strong>, la misma es: "<strong>live</strong>"</p>
+				<p>2) Si al terminar la "<strong>instalación del sistema</strong>", al reiniciarse ves que en el <strong>menú de inicio de Grub</strong> no aparecen listados otros sistemas operativos que puedas tener instalados; (no es probable que ocurra), <strong>no te alarmes</strong>, solo <strong>inicia Auxtral</strong> y como <strong>usuario root</strong> en la terminal ejecuta el script "<strong>ospe</strong>" y espera que grub se vuelva a actualizar. Esto podría ocurrir también despues de alguna actualización que incluya el paquete <strong>grub-pc, </strong>solo vuelve a ejecutar el script.</p>
+			  <p>&nbsp;</p>
+</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+    
+	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-md-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Una configuración no ortodoxa de Dolphin en Auxtral GNU/Linux</h1>
+				</header>
+				<p>Ayer el usuario Glyn me comentaba que en la versión (no me fuma cundo dicen&quot;sabores&quot;) KDE-Plasma, instaló Dolphin y se le presentaron problemas con la vista de carpetas, mas precisamente con la carpeta de usuario.<br>
+				  Sé de hecho, o supongo, que como linuxeros ortodoxos, para los cuales no está hecho Auxtral, tal como lo digo en la página &quot;acerca&quot; del sitio web, y que bien lo entendió <strong>Jessie Smith de Distrowatch</strong> cuando dijo:  <strong>&quot;Auxtral es una distribución que se sale del camino sin soltarse de la mano&quot;</strong>, algunos deben instalar, o <strong>reemplazar Nemo por Dolphin</strong>, y por lo tanto habrán experimentado lo mismo que Glyn.<br>
+				  Si bién le expliqué que Dplphin no forma parte de Auxtral y por lo tanto no podía darle soporte, solo de porfía, generé un usuario nuevo en mi KDE-Plasma llamado &quot;estudio&quot;, instalé Dolphin y pude encontrar una solución PARA NADA ORTODOXA pero a mí me funcionó.<br>
+				  El inconveniente sé que está en la configuración de la carpeta /etc/skel, que es donde está guardada la personalización de Auxtral y que al parecer Dolphin al contrario que los otros administradores de archivos no lee, y en vez de buscar 2tu&quot; carpeta de usuario, busca la carpeta &quot;user&quot;.<br>
+				  Por si a alguien le sirve, acá les dejo el video que preparé para el amigo Glyn &gt;&gt;&gt; <a href="https://www.youtube.com/watch?v=ShgVvwOMHW4" target="_blank">https://www.youtube.com/watch?v=ShgVvwOMHW4</a><br>
+				  Saludos.<br>
+			    Guillermo Sosa.</p>
+				<p>&nbsp;</p>
+			  <p>&nbsp;</p>
+
+				<h2>Leer entradas anteriores</h2>
+				<p>&nbsp;</p>
+				<p><a href="hoja01.html">&gt;&gt; INFO 31 de MAYO de 2023</a></p>
+				<p><a href="hoja03.html">&gt;&gt; INFO 06 de JUNIO de 2023</a></p>
+          </article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+    
+    <!-- container -->
+    <div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+	  </div>
+</div> <!-- /container -->
+
+    <!-- container -->
+    <div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+	  <div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+	  </div>
+</div> <!-- /container -->
+	
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p><br>
+								<a href="mailto:#">auxtral@protonmail.com</a><br>
+								<br>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://twitter.com/auxtralgnulinux" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+								                        <a href="https://t.me/auxtral_gnu_linux" target="_blank"><i class="fa fa-telegram" style='color:#'></i></a></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href="https://www.facebook.com/people/Auxtral-GNULinux/100083144570415/?ref=page_internal" target="_blank"><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Legales</h3>
+						<div class="widget-body">
+							<p><a href="Terminos.html">Términos y condiciones</a></p>
+							<p><a href="politicas.html">Políticas de privacidad</a></p>
+							<p><a href="licencias.html">Licencias</a></p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> | 
+								<a href="acerca.html">Acerca</a> |
+								<a href="descargas.html">Desacrgas</a> |
+								<a href="faqs.html">FAQs </a>|
+								<a href="oldsite/ayuda.html" target="_blank">Ayuda</a>
+							|
+							<a href="english/index.html">English</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2014,. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+</body>
+</html>

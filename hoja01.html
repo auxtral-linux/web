@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Auxtral GNU/Linux es una distribución basada en Debian 12 Bookworm sin non-free-fermware">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com) - Modificado por Guillermo Sosa para Auxtral">
+	
+	<title>Sobre las primeras imagenes ISO de Auxtral 4 (Polaris Australis)</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class=""><a href="index.html">Home</a></li>
+					<li class=""><a href="acerca.html">Acerca</a></li>
+                    <li class=""><a href="descargas.html">Descargas</a></li>
+                    <li class=""><a href="faqs.html">FAQs</a></li>
+                    <li class=""><a href="oldsite/ayuda.html" target="_blank">Ayuda</a></li>
+                    <li><a href="english/index.html">English</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+    
+    	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="row widget"></div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Script &quot;ospe&quot;<a href="https://sourceforge.net/projects/auxtral-gnu-linux/files/Cinnamon/Auxtral_4-Cinnamon-F-088-230520.iso/download" target="_blank"></a></h4>
+						<p><img src="assets/images/ospe.png" alt=""></p>
+				  </div>
+			  </div>
+				<div class="row widget"></div>
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+		  <article class="col-md-8 maincontent">
+			<header class="page-header">
+					<h1 class="alert-danger">Importante &quot;LEER&quot; </h1>
+				</header>
+				<p>1) En el caso de que al estar <strong>ejecutando el sistema en modo Live</strong> para alguna tarea te llega a pedir <strong>clave de autentificación</strong>, la misma es: "<strong>live</strong>"</p>
+				<p>2) Si al terminar la "<strong>instalación del sistema</strong>", al reiniciarse ves que en el <strong>menú de inicio de Grub</strong> no aparecen listados otros sistemas operativos que puedas tener instalados; (no es probable que ocurra), <strong>no te alarmes</strong>, solo <strong>inicia Auxtral</strong> y como <strong>usuario root</strong> en la terminal ejecuta el script "<strong>ospe</strong>" y espera que grub se vuelva a actualizar. Esto podría ocurrir también despues de alguna actualización que incluya el paquete <strong>grub-pc, </strong>solo vuelve a ejecutar el script.</p>
+			  <p>&nbsp;</p>
+</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+    
+	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-md-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Sobre las primeras ISOs de Auxtral 4 subidas el sábado 20 de mayo de 2023</h1>
+				</header>
+				<p>Buenos días.<br>
+			    Atento a los inconvenientes surgidos durante el pasado fin de semana creo conveniente poner a todos los visitantes del sitio al tanto de lo ocurrido y sus causas.</p>
+				<p>Despues de casi 1 semana desde la publicación de las primeras ISOS del lanzamiento de Auxtral 4 (Polaris Australis), recibí algunas observaciones de algunos usuarios, no obstante, un youtuber que hizo un video (9to5Linux &gt;&gt; <a href="https://www.youtube.com/watch?v=5uHRkEj_4EA" target="_blank"><strong>https://www.youtube.com/watch?v=5uHRkEj_4EA</strong></a> y el sistema corrió perfectamente, igual al video del usuario RikyLinux &gt;&gt; <strong><a href="https://fediverse.tv/w/vJUqJ4zPHUqPvbxraoMF93" target="_blank">https://fediverse.tv/w/vJUqJ4zPHUqPvbxraoMF93</a></strong> que tengo entendido hizo la instalación con arranque uefi.<br>
+				  El problema se sucitaba al quere iniciar en modo live con uefi.<br>
+				  El inconveniente fué informado por correo electónico (auxtral@protonmail.com) por Glyn Burgess; y con el mismo problema se encontró en Brazil Edilton Olivera, a ambos quiero hacer llegar mi mas profundo agradecimiento. Esto último debido a que la filosofía con la que hago Auxtra es, entere otras, recibir abiertamente todas las observaciones, críticas o marcación de errores. estas son invalorables para poder mejorar la distribución y/o corregir errores como en este caso.</p>
+				<p>El inconveniente estaba en la configuración del atchivo &quot;grub.cfg· del EFI de la ISO.</p>
+				<p>Muchas gracias y disculpas por el inconveniente.</p>
+				<p>Por otro lado, ayer (lúnes 29 de mayo) las ISOs resubidas para solucionar el problema anterior; y debo aclarar que ese sí que fue un error grosero de mi parte; (se subieron primero y se probaron despues), y resultó que el paquete grub-pc_amd64 no se había actualizado en la carpeta &quot;pool&quot; de las ISOsy por lo tanto fallaba la instalación.</p>
+				<p>Afortunadamente este problema fue identificado y corregido correctamente trabajando contra reloj.</p>
+				<p>Gracias y disculpas otra vez.</p>
+				<p>PD: Esta es una nueva sección de este sitio web y voy a ver si puedo mantenerla, con una frecuencia aún no determinada, para tener a todos al tanto de las novedades que puedan aparecer.</p>
+				<p>&nbsp;</p>
+			  <p>&nbsp;</p>
+
+				<h2><span class="alert-danger">Instalación de los &quot;non-free-firmwares&quot;</span></h2>
+				<p>&nbsp;</p>
+				<p>Sabido es el cambio con el que nos ha sorprendido (y no gratamente a todos los usuarios) el Proyecto Debian con la modificación introducida al &quot;punto 5&quot; de sus DFSG, al cual se le ha agregado el siguiente párrafo:</p>
+			  <p><strong>&quot;Los medios oficiales de Debian pueden incluir firmware que de otro modo no formaría parte del sistema Debian para permitir el uso de Debian con hardware que requiera dicho firmware&quot;</strong></p>
+			  <p>Como hacedor de Auxtral, y no de acuerdo con esta decición, expreso en la <strong>Home</strong> de este sitio web bajo el título <strong>&quot;FREE FIRMWARE&quot;:</strong></p>
+			  <p>                				<strong>Si bien Auxtral GNU/Linux esta basado principalmente en Debian GNU/Linux por considerar a este realmente "El Sistema Operativo Universal", su filosofía no se condice con el cambio o modificaciòn del "punto 5" de las Directices del Software Libre de Debian (DFSG). Por lo tanto se harà todo lo posible para que Auxtral 4 (Polaris Australis) siga sin modificaciones en el instalador y mantenerse con solo el componente "main" (libres) de los repositorios como lo ha hecho en sus tres versiones anteriores.</strong></p>
+			  <p>No obstante, <strong>el usuario final podra optar</strong> (igual que en las versiones 1, 2 y 3 de Auxtraal) si desea mantenerse en los repositorios libres o habilitar los <strong>"contrib" + "non-free" y "non-free-firmware"</strong> mas el <strong>repositorio multimedia</strong>, ya sea por preferencia personal o por nesecidad, como en el caso de requerir un mayor rendimiento de su videocard, o bién si requiere usar una conexion wiFI a intternet, mas aùn si usa una portàtil, donde a fuerza de ser sincero no es comùn que funcionen los firmwares libres.</p>
+			  <p>Atento a esto, y si bien en la sección AYUDA se explica como instalar firmwares propietarios o privativos, y considerando algunas consultas y confusiones al respecto acá les dejo detallado <strong>como instalar los firmwares non-free con pocos comandos y de forma sencilla:</strong></p>
+			  <p>Logueados como <strong>ROOT</strong> en la terminal ejecutar los siguientes comandos:</p>
+			  <p><strong># nonfree</strong> (esto habilitará los repositorios nesesarios y pedirá una actualización. Responder &quot;S&quot;)</p>
+			  <p><strong># apt install isenkram isenkram-cli</strong> (para instalar el instalador automático)</p>
+			  <p>Finalmente ejecutar:</p>
+			  <p><strong># isenkram-autoinstall-firmware</strong> (cuando finalize debes reiniciar el sistema)</p>
+			  <p>Esto instalará <strong>&quot;todos&quot;</strong> <strong>los firmwares</strong> propietarios que nesecite tu hardware siempre y cuando estén disponibles en los repositorios &quot;non-free-firmware&quot; de Debian</p>
+			  <p>Saludos cordiales!!!.</p>
+			  <p>Guillermo Sosa.</p>
+			  <p>&nbsp;</p>
+			  <h2>Leer entradas anteriores</h2>
+			  <p><a href="hoja02.html">&gt;&gt; INFO 01 de JUNIO de 2023</a><a href="hoja01.html"></a></p>
+              <p><a href="hoja03.html">&gt;&gt; INFO 06 de JUNIO de 2023</a></p>
+          </article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+    
+    <!-- container -->
+    <div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+	  </div>
+</div> <!-- /container -->
+
+    <!-- container -->
+    <div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+	  <div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+	  </div>
+</div> <!-- /container -->
+	
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p><br>
+								<a href="mailto:#">auxtral@protonmail.com</a><br>
+								<br>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://twitter.com/auxtralgnulinux" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+								                        <a href="https://t.me/auxtral_gnu_linux" target="_blank"><i class="fa fa-telegram" style='color:#'></i></a></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href="https://www.facebook.com/people/Auxtral-GNULinux/100083144570415/?ref=page_internal" target="_blank"><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Legales</h3>
+						<div class="widget-body">
+							<p><a href="Terminos.html">Términos y condiciones</a></p>
+							<p><a href="politicas.html">Políticas de privacidad</a></p>
+							<p><a href="licencias.html">Licencias</a></p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> | 
+								<a href="acerca.html">Acerca</a> |
+								<a href="descargas.html">Desacrgas</a> |
+								<a href="faqs.html">FAQs </a>|
+								<a href="oldsite/ayuda.html" target="_blank">Ayuda</a>
+							|
+							<a href="english/index.html">English</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2014,. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+</body>
+</html>
