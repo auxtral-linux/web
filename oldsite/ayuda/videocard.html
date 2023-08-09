@@ -1,0 +1,1675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Instalar Nvidia drivers en Auuxtral, SolydXK o Debian 12 Bookworm</title>
+
+<link rel="stylesheet" href="estilos.css"/>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+<meta name="keywords" content="Nvidia, drivers, system-settings">
+<meta name="description" content="Instalacion de drivers de placa de video Nvidia en Debian Bookworm o Auxtral 4 con solidxk-system (Auxtral-Settings)">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Last-Modified" content="0">
+<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="content-language" content="es">
+<meta http-equiv="revisit-after" content="15 days">
+<link rel="shortcut icon" href=" ../favicon.png">
+<style type= "text/css">
+</style>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+#apDiv1 {
+	position: fixed;
+	width: 100%;
+	height: 71px;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	background:
+}
+#apDiv2 {
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 75px;
+	z-index: 1;
+	top: 20px;
+}
+#apDiv3 {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	z-index: 1;
+	top: 6px;
+	left: 20px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 297px;
+	height: 15px;
+	z-index: 2;
+	left: 82px;
+	top: 49px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #258540;
+}
+#apDiv5 {	position: absolute;
+	width: 184px;
+	height: 40px;
+	z-index: 3;
+	left: 80px;
+	top: 10px;
+}
+#apDiv12 {
+	position: absolute;
+	width: 365px;
+	height: 364px;
+	z-index: 2;
+	left: 634px;
+	top: 1129px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+}
+#apDiv13 {
+	position: absolute;
+	width: 200px;
+	height: 37px;
+	z-index: 1;
+	left: 75px;
+	top: 14px;
+}
+#apDiv14 {	position: absolute;
+	width: 150px;
+	height: 50px;
+	z-index: 4;
+	left: 103px;
+	top: 299px;
+}
+#apDiv6 {
+	position: absolute;
+	width: 100%;
+	height: 1800px;
+	z-index: 0;
+	top: 100px;
+	left: 0px;
+}
+#apDiv7 {
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 1770px;
+	z-index: 1;
+	top: 10px;
+}
+#apDiv9 {
+	position: absolute;
+	width: 1000px;
+	height: 1px;
+	z-index: 1;
+	top: 40px;
+	left: 0px;
+}
+descrip-auxtral {
+	color: #333;
+}
+#apDiv15 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	height: 740px;
+	z-index: 9;
+	top: 750px;
+}
+#apDiv16 {
+	position: relative;
+	margin: 0 auto;
+	width: 370px;
+	height: 30px;
+	z-index: 1;
+	top: 50px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333;
+	text-align: center;
+}
+#apDiv17 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 40px;
+	top: 220px;
+}
+#apDiv18 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 680px;
+	top: 220px;
+}
+#apDiv19 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 250px;
+	top: 220px;
+}
+#apDiv20 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 470px;
+	top: 220px;
+}
+#apDiv21 {
+	position: absolute;
+	width: 512px;
+	height: 79px;
+	z-index: 4;
+	left: 141px;
+	top: 104px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+	text-align: justify;
+}
+#apDiv24 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 5;
+	top: 400px;
+	left: 40px;
+}
+#apDiv25 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 250px;
+	top: 400px;
+}
+#apDiv26 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 470px;
+	top: 402px;
+}
+#apDiv27 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 690px;
+	top: 400px;
+}
+#apDiv28 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 40px;
+	top: 580px;
+}
+#apDiv29 {	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 680px;
+	top: 580px;
+}
+#apDiv30 {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 4;
+	left: 250px;
+	top: 580px;
+}
+#apDiv31 {	position: absolute;
+	width: 112px;
+	height: 19px;
+	z-index: 4;
+	top: 310px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+	left: 24px;
+}
+#apDiv32 {	position: absolute;
+	width: 55px;
+	height: 25px;
+	z-index: 4;
+	top: 310px;
+	left: 268px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv33 {	position: absolute;
+	width: 63px;
+	height: 25px;
+	z-index: 4;
+	top: 310px;
+	left: 485px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv34 {	position: absolute;
+	width: 59px;
+	height: 25px;
+	z-index: 4;
+	left: 692px;
+	top: 310px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv35 {	position: absolute;
+	width: 89px;
+	height: 25px;
+	z-index: 4;
+	left: 35px;
+	top: 490px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv36 {	position: absolute;
+	width: 50px;
+	height: 25px;
+	z-index: 4;
+	left: 266px;
+	top: 490px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv37 {	position: absolute;
+	width: 100px;
+	height: 25px;
+	z-index: 4;
+	left: 461px;
+	top: 490px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv38 {	position: absolute;
+	width: 100px;
+	height: 25px;
+	z-index: 4;
+	left: 688px;
+	top: 490px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv39 {	position: absolute;
+	width: 145px;
+	height: 25px;
+	z-index: 4;
+	left: 11px;
+	top: 670px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv40 {
+	position: absolute;
+	width: 150px;
+	height: 25px;
+	z-index: 4;
+	left: 235px;
+	top: 670px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv41 {	position: absolute;
+	width: 125px;
+	height: 25px;
+	z-index: 4;
+	left: 672px;
+	top: 670px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv52 {
+	position: absolute;
+	width: 800px;
+	height: 115px;
+	z-index: 4;
+	background-color: #666666;
+	left: 0px;
+	top: 780px;
+}
+#apDiv8 {
+	position: absolute;
+	width: 100%;
+	height: 950px;
+	z-index: 3;
+	top: 1500px;
+	left: 0px;
+	background-color: #00861A;
+	background-image: url(imagenes/pinto-fondo-orng.png);
+}
+#apDiv10 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	height: 880px;
+	z-index: 1;
+	top: 20px;
+	color: #333;
+}
+#apDiv11 {
+	position: absolute;
+	width: 269px;
+	height: 32px;
+	z-index: 1;
+	left: 261px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #FFF;
+	top: 83px;
+}
+#apDiv22 {
+	position: absolute;
+	width: 75px;
+	height: 81px;
+	z-index: 2;
+	left: 54px;
+	top: 28px;
+}
+#apDiv23 {
+	position: absolute;
+	width: 740px;
+	height: 144px;
+	z-index: 3;
+	left: 30px;
+	top: 194px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+}
+#apDiv42 {
+	position: absolute;
+	width: 790px;
+	height: 463px;
+	z-index: 4;
+	left: 0px;
+	top: 359px;
+}
+#apDiv43 {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	z-index: 2;
+	top: 0px;
+	background-color: #A1FFCB;
+}
+#apDiv44 {
+	position: absolute;
+	width: 100%;
+	height: 19px;
+	z-index: 3;
+	top: 905px;
+	background-color: #A1FFCB;
+}
+#apDiv45 {
+	position: absolute;
+	width: 100%;
+	height: 1424px;
+	z-index: 4;
+	top: 2454px;
+	left: 0px;
+	background-image: url(imagenes/punto-fondo-blanco.png);
+}
+#apDiv46 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	height: 880px
+	z-index: 1;
+	top: 20px;
+	height: 1350px;
+}
+#apDiv47 {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	z-index: 1;
+	left: 119px;
+	top: 28px;
+}
+#apDiv48 {	position: absolute;
+	width: 269px;
+	height: 32px;
+	z-index: 1;
+	left: 261px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333;
+	top: 83px;
+}
+#apDiv49 {
+	position: absolute;
+	width: 85px;
+	height: 32px;
+	z-index: 2;
+	left: 353px;
+	top: 104px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333;
+}
+#apDiv50 {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 5;
+	left: 470px;
+	top: 580px;
+}
+#apDiv51 {
+	position: absolute;
+	width: 77px;
+	height: 25px;
+	z-index: 5;
+	left: 475px;
+	top: 670px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+#apDiv53 {
+	position: absolute;
+	width: 800px;
+	height: 453px;
+	z-index: 3;
+	left: 0px;
+	top: 270px;
+}
+#apDiv54 {
+	position: absolute;
+	width: 361px;
+	height: 32px;
+	z-index: 4;
+	left: 200px;
+	top: 220px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+}
+#apDiv55 {
+	position: absolute;
+	width: 234px;
+	height: 22px;
+	z-index: 5;
+	left: 265px;
+	top: 817px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+}
+#apDiv56 {
+	position: absolute;
+	width: 800px;
+	height: 453px;
+	z-index: 6;
+	left: 0px;
+	top: 870px;
+}
+#apDiv57 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 5;
+	top: 2550px;
+}
+#apDiv58 {
+	position: absolute;
+	width: 100%;
+	height: 545px;
+	z-index: 5;
+	top: 3883px;
+	left: 0px;
+	background-image: url(imagenes/punto-fondo-dark01.png);
+}
+#apDiv59 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	height: 880px
+	z-index: 1;
+	height: 525px;
+}
+#apDiv60 {
+	position: absolute;
+	width: 600px;
+	height: 62px;
+	z-index: 1;
+	left: 100px;
+	top: 35px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #A7A9A7;
+}
+#apDiv58 #apDiv59 #apDiv60 {
+	text-align: center;
+	color: #CDCDCD;
+}
+#apDiv61 {
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	z-index: 2;
+	left: 0px;
+	top: 130px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #cdcdcd;
+	text-align: justify;
+}
+.txt-bco {
+	font-size: 18px;
+}
+#apDiv62 {
+	position: absolute;
+	width: 800px;
+	height: 154px;
+	z-index: 3;
+	left: 0px;
+	top: 370px;
+}
+#apDiv63 {
+	position: absolute;
+	width: 115px;
+	height: 115px;
+	z-index: 1;
+}
+firewall {
+	font-family: Verdana, Geneva, sans-serif;
+}
+firewall {
+	font-size: 18px;
+}
+#apDiv58 #apDiv59 #apDiv62 span span {
+	font-size: 18px;
+}
+#apDiv58 #apDiv59 #apDiv62 span span {
+	color: #cdcdcd;
+}
+#apDiv58 #apDiv59 #apDiv62 span span {
+	font-family: Verdana, Geneva, sans-serif;
+}
+#apDiv64 {
+	position: absolute;
+	width: 655px;
+	height: 115px;
+	z-index: 6;
+	left: 145px;
+	top: 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #cdcdcd;
+	text-align: justify;
+}
+#apDiv58 #apDiv59 #apDiv62 #apDiv64 span {
+	font-size: 18px;
+}
+#apDiv58 #apDiv59 #apDiv62 #apDiv64 span {
+	color: #cdcdcd;
+}
+#apDiv65 {
+	position: absolute;
+	width: 115px;
+	height: 115px;
+	z-index: 7;
+	left: 0px;
+	top: 10px;
+}
+#apDiv66 {
+	position: absolute;
+	width: 100%;
+	height: 485px;
+	z-index: 6;
+	top: 4431px;
+	left: 0px;
+	background-image: url(imagenes/punto-fondo-blanco.png);
+}
+#apDiv67 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	z-index: 1;
+	height: 475px;
+}
+#apDiv68 {
+	position: absolute;
+	width: 219px;
+	height: 30px;
+	z-index: 1;
+	left: 277px;
+	top: 35px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333;
+}
+#apDiv69 {
+	position: absolute;
+	width: 800px;
+	height: 108px;
+	z-index: 2;
+	left: 0px;
+	top: 100px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+	text-align: justify;
+}
+#apDiv70 {
+	position: absolute;
+	width: 196px;
+	height: 30px;
+	z-index: 3;
+	left: 289px;
+	top: 300px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333;
+}
+#apDiv71 {
+	position: absolute;
+	width: 800px;
+	height: 101px;
+	z-index: 4;
+	left: 0px;
+	top: 338px;
+}
+#apDiv66 #apDiv67 #apDiv71 p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+	text-align: justify;
+}
+#apDiv72 {
+	position: absolute;
+	width: 100%;
+	height: 490px;
+	z-index: 7;
+	left: 0px;
+	top: 4920px;
+	background-image: url(imagenes/punto-fondo-black01.png);
+}
+#apDiv73 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	z-index: 1;
+	height: 450px;
+}
+#apDiv74 {
+	position: absolute;
+	width: 250px;
+	height: 30px;
+	z-index: 1;
+	left: 275px;
+	top: 67px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #FFF;
+}
+#apDiv75 {
+	position: absolute;
+	width: 800px;
+	height: 274px;
+	z-index: 2;
+	left: 0px;
+	top: 156px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+}
+#apDiv76 {
+	position: absolute;
+	width: 100%;
+	height: 1491px;
+	z-index: 8;
+	left: 0px;
+	top: 5415px;
+	background-image: url(imagenes/punto-fondo-blanco.png);
+}
+#apDiv77 {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+	z-index: 1;
+}
+#apDiv78 {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	z-index: 1;
+	top: 35px;
+}
+#apDiv79 {
+	position: absolute;
+	width: 327px;
+	height: 30px;
+	z-index: 2;
+	left: 275px;
+	top: 90px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333;
+}
+#apDiv80 {
+	position: absolute;
+	width: 100%;
+	height: 743px;
+	z-index: 0;
+	left: 0px;
+	top: 750px;
+	background-image: url(imagenes/punto-fondo-blanco.png);
+}
+#apDiv81 {
+	position: absolute;
+	width: 800px;
+	height: 1182px;
+	z-index: 3;
+	left: 0px;
+	top: 220px;
+}
+#apDiv76 #apDiv77 #apDiv81 p {
+	font-family: Verdana, Geneva, sans-serif;
+}
+#apDiv76 #apDiv77 #apDiv81 p {
+	font-size: 18px;
+}
+#apDiv76 #apDiv77 #apDiv81 p {
+	color: #333;
+}
+#apDiv82 {
+	position: absolute;
+	width: 800px;
+	height: 90px;
+	z-index: 10;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+	background-color: #35bf5c;
+	top: 828px;
+	left: 0px;
+}
+#apDiv83 {
+	position: absolute;
+	width: 780px;
+	height: 77px;
+	z-index: 1;
+	left: 10px;
+	top: 10px;
+}
+#apDiv84 {
+	position: absolute;
+	width: 800px;
+	height: 228px;
+	z-index: 10;
+	left: 0px;
+	top: 962px;
+	background-color: #E0F5E6;
+}
+#apDiv85 {
+	position: absolute;
+	width: 780px;
+	height: 207px;
+	z-index: 1;
+	left: 10px;
+	top: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #333;
+}
+a:link {
+	color: #96c110;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #96c110;
+}
+a:hover {
+	text-decoration: none;
+	color: #789a0c;
+}
+a:active {
+	text-decoration: none;
+	font-size: 14px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+#apDiv86 {
+	position: absolute;
+	width: 100%;
+	height: 600px;
+	z-index: -1;
+	left: 0px;
+	top: 6909px;
+	background-image: url(imagenes/punto-fondo-dark01.png);
+}
+#apDiv87 {
+	position: relative;
+	margin: 0 auto;
+	width: 930px;
+	height: 480px;
+	z-index: 1;
+	top: 100px;
+	background-image: url(imagenes/unmundo.png);
+}
+#apDiv88 {
+	position: absolute;
+	width: 594px;
+	height: 30px;
+	z-index: 1;
+	left: 203px;
+	top: -57px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #FFF;
+}
+#apDiv89 {
+	position: absolute;
+	width: 100%;
+	height: 260px;
+	z-index: 11;
+	left: 0px;
+	top: 1910px;
+	background-color: #293538;
+}
+#apDiv90 {
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 250px;
+	z-index: 1;
+}
+#apDiv91 {
+	position: absolute;
+	width: 74px;
+	height: 74;
+	z-index: 2;
+	left: 447px;
+	top: 8px;
+}
+#apDiv92 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 3;
+	left: 31px;
+	top: 207px;
+}
+#apDiv93 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 4;
+	left: 812px;
+	top: 218px;
+}
+#apDiv94 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 5;
+	left: 749px;
+	top: 90px;
+}
+#apDiv95 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 6;
+	left: 114px;
+	top: 82px;
+}
+#apDiv96 {
+	position: absolute;
+	width: 74px;
+	height: 23px;
+	z-index: 7;
+	left: 445px;
+	top: 75px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+}
+#apDiv97 {
+	position: absolute;
+	width: 98px;
+	height: 21px;
+	z-index: 8;
+	left: 739px;
+	top: 161px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+}
+#apDiv98 {
+	position: absolute;
+	width: 200px;
+	height: 22px;
+	z-index: 9;
+	left: 95px;
+	top: 168px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+}
+#apDiv99 {
+	position: absolute;
+	width: 112px;
+	height: 19px;
+	z-index: 10;
+	left: 48px;
+	top: 269px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+}
+#apDiv100 {
+	position: absolute;
+	width: 73px;
+	height: 22px;
+	z-index: 11;
+	left: 822px;
+	top: 289px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+}
+#apDiv101 {
+	position: absolute;
+	width: 166px;
+	height: 25px;
+	z-index: 12;
+	left: 106px;
+	top: 57px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #2fa850;
+}
+#apDiv102 {
+	position: absolute;
+	width: 364px;
+	height: 156px;
+	z-index: 0;
+	left: 0px;
+	top: 70px;
+	color: #FFF;
+	text-align: justify;
+}
+.importante {
+	font-weight: bold;
+	color: #F00;
+}
+#apDiv103 {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	z-index: 2;
+	left: 0px;
+	top: 18px;
+}
+#apDiv104 {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	background-color: #35bf5c;
+}
+#apDiv105 {
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	z-index: 3;
+	top: 661px;
+}
+#apDiv106 {
+	position: absolute;
+	width: 200px;
+	height: 33px;
+	z-index: 1;
+	left: 20px;
+	top: 30px;
+}
+#apDiv107 {
+	position: absolute;
+	width: 150px;
+	height: 33px;
+	z-index: 1;
+	left: 50px;
+	top: 0px;
+}
+#apDiv108 {
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	z-index: 2;
+	left: 0px;
+	top: 0px;
+}
+#apDiv109 {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	z-index: 2;
+	left: 0px;
+	top: 72px;
+	background-color: #96c110;
+}
+#apDiv110 {
+	position: absolute;
+	width: 220px;
+	height: 50px;
+	z-index: 3;
+	left: 390px;
+	top: 132px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+}
+#apDiv111 {position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 3;
+	top: 87px;
+	left: 750px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+.negri-ver-lic {
+	font-weight: bold;
+}
+#apDiv112 {
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	z-index: 4;
+	left: 74px;
+	top: 121px;
+}
+#apDiv113 {
+	position: absolute;
+	width: 209px;
+	height: 15px;
+	z-index: 5;
+	left: 795px;
+	top: 108px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+}
+#apDiv114 {
+	position: absolute;
+	width: 211px;
+	height: 15px;
+	z-index: 6;
+	left: 795px;
+	top: 150px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+}
+#apDiv115 {
+	position: absolute;
+	width: 211px;
+	height: 15px;
+	z-index: 7;
+	left: 795px;
+	top: 196px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+}
+#apDiv116 {
+	position: absolute;
+	height: 115px;
+	z-index: 4;
+	left: 400px;
+	top: 60px;
+	width: 200px;
+}
+#apDiv117 {
+	position: absolute;
+	width: 500px;
+	height: 25px;
+	z-index: 4;
+	left: 500px;
+	top: 45px;
+}
+#apDiv118 {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	z-index: 2;
+	left: 0px;
+	top: 95px;
+}
+#apDiv119 {
+	position: absolute;
+	width: 125px;
+	height: 5px;
+	z-index: 5;
+	left: 500px;
+	top: 70px;
+	background-color: #34BF5B;
+}
+#apDiv120 {
+	position: absolute;
+	width: 125px;
+	height: 20px;
+	z-index: 1;
+	left: 0px;
+	top: 4px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #299647;
+	text-align: center;
+}
+#apDiv121 {
+	position: absolute;
+	width: 125px;
+	height: 20px;
+	z-index: 2;
+	left: 125px;
+	top: 4px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+	text-align: center;
+}
+#apDiv122 {
+	position: absolute;
+	width: 125px;
+	height: 20px;
+	z-index: 3;
+	left: 250px;
+	top: 4px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+	text-align: center;
+}
+#apDiv123 {
+	position: absolute;
+	width: 125px;
+	height: 20px;
+	z-index: 4;
+	left: 375px;
+	top: 4px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #35bf5c;
+	text-align: center;
+}
+#apDiv6 #apDiv7 #apDiv12 #apDiv102 p {
+	color: #25bf5c;
+}
+#apDiv6 #apDiv7 #apDiv12 #apDiv102 p {
+	color: #2FA850;
+}
+#apDiv124 {
+	position: absolute;
+	width: 500px;
+	height: 1px;
+	z-index: 6;
+	left: 500px;
+	top: 74px;
+	background-color: #96c110;
+}
+#apDiv125 {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	z-index: 4;
+	left: 0px;
+	top: 0px;
+	background-image: url(imagenes/limite01.fw.png);
+}
+#apDiv126 {
+	position: absolute;
+	width: 100%;
+	height: 753px;
+	z-index: 0;
+	left: 0px;
+	top: 746px;
+	background-image: url(imagenes/punto-fondo-blanco.png);
+}
+#apDiv127 {
+	position: absolute;
+	height: 115px;
+	z-index: 1;
+	left: 0px;
+	top: 658px;
+}
+#apDiv128 {
+	position: absolute;
+	width: 800px;
+	height: 424px;
+	z-index: 3;
+	left: 100px;
+	top: 860px;
+}
+#apDiv129 {
+	position: absolute;
+	width: 250px;
+	height: 22px;
+	z-index: 8;
+	left: 20px;
+	top: 46px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #abe7bd;
+}
+.stay {	color: #ABE7BD;
+}
+#apDiv130 {
+	position: absolute;
+	width: 200px;
+	height: 22px;
+	z-index: 9;
+	left: 795px;
+	top: 46px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #2D9F4D;
+}
+.guon {
+	color: #2D9F4D;
+}
+#apDiv144 {
+	position: absolute;
+	width: 137px;
+	height: 33px;
+	z-index: 10;
+	left: 867px;
+	top: 30px;
+}
+#apDiv145 {	position: absolute;
+	width: 33px;
+	height: 33px;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+}
+#apDiv146 {	position: absolute;
+	width: 90px;
+	height: 22px;
+	z-index: 2;
+	left: 42px;
+	top: 6px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #34bf5b;
+}
+#apDiv131 {
+	position: absolute;
+	width: 371px;
+	height: 30px;
+	z-index: 1;
+	left: 100px;
+	top: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #333333;
+	font-weight: bold;
+}
+#apDiv137 {
+	position: absolute;
+	width: 79px;
+	height: 81px;
+	z-index: 12;
+	left: 0px;
+	top: 0px;
+}
+#apDiv132 {
+	position: absolute;
+	width: 1000px;
+	height: 1470px;
+	z-index: 13;
+	left: 0px;
+	top: 111px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #666;
+}
+#apDiv138 {
+	position: absolute;
+	width: 1000px;
+	height: 90px;
+	z-index: 12;
+	left: 0px;
+	top: 0px;
+	background-color: #293538;
+}
+#apDiv139 {
+	position: absolute;
+	width: 989px;
+	height: 79px;
+	z-index: 1;
+	left: 10px;
+	top: 10px;
+}
+#apDiv140 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 1;
+	left: 20px;
+	top: 0px;
+}
+#apDiv141 {
+	position: absolute;
+	width: 862px;
+	height: 70px;
+	z-index: 2;
+	left: 115px;
+	top: 2px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #D8D8D8;
+	text-align: justify;
+}
+#apDiv6 #apDiv7 #apDiv9 #apDiv132 p span span {
+	text-align: justify;
+}
+body {
+	background-image: url();
+}
+#apDiv133 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 4;
+	left: 463px;
+	top: 1680px;
+}
+#apDiv192 {
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 92px;
+	z-index: 1;
+}
+#apDiv193 {
+	position: absolute;
+	width: 51px;
+	height: 51px;
+	z-index: 1;
+	left: 425px;
+	top: 4px;
+}
+#apDiv195 {
+	position: absolute;
+	width: 740px;
+	height: 45px;
+	z-index: 2;
+	top: 6px;
+	left: 500px;
+	background-color: rgba(0, 85, 62, 0.8);
+}
+#apDiv196 {
+	position: absolute;
+	width: 170px;
+	height: 40px;
+	z-index: 1;
+	left: 190px;
+	top: 4px;
+}
+#apDiv197 {
+	position: absolute;
+	width: 170px;
+	height: 40px;
+	z-index: 2;
+	left: 380px;
+	top: 4px;
+}
+#apDiv198 {
+	position: absolute;
+	width: 170px;
+	height: 40px;
+	z-index: 3;
+	left: 0px;
+	top: 4px;
+}
+#apDiv199 {
+	position: absolute;
+	width: 170px;
+	height: 40px;
+	z-index: 4;
+	left: 570px;
+	top: 4px;
+}
+#apDiv134 {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	z-index: 2;
+	left: 0px;
+	top: 100px;
+	background-color: #e5e5e5;
+}
+#apDiv135 {
+	position: absolute;
+	width: 137px;
+	height: 33px;
+	z-index: 11;
+	left: 313px;
+	top: 30px;
+}
+#apDiv136 {
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+}
+#apDiv142 {
+	position: absolute;
+	width: 90px;
+	height: 22px;
+	z-index: 2;
+	left: 42px;
+	top: 6px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+}
+#apDiv143 {
+	position: absolute;
+	width: 137px;
+	height: 33px;
+	z-index: 12;
+	left: 578px;
+	top: 30px;
+}
+#apDiv147 {
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+}
+#apDiv148 {
+	position: absolute;
+	width: 90px;
+	height: 22px;
+	z-index: 2;
+	left: 42px;
+	top: 6px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+}
+#apDiv149 {
+	position: absolute;
+	width: 1000px;
+	height: 360px;
+	z-index: 12;
+	left: 0px;
+	top: 290px;
+}
+#apDiv150 {
+	position: absolute;
+	width: 1000px;
+	height: 36px;
+	z-index: 12;
+	top: 1180px;
+	left: 0px;
+}
+#apDiv151 {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	z-index: 2;
+	left: 0px;
+	top: 70px;
+	background: linear-gradient(180deg, #96c110, #fff);
+}
+#apDiv152 {
+	position: absolute;
+	width: 1000px;
+	height: 115px;
+	z-index: 12;
+	left: 0px;
+	top: 140px;
+	background-color: #990000;
+}
+#apDiv153 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	z-index: 1;
+	left: 30px;
+	top: 20px;
+}
+#apDiv154 {
+	position: absolute;
+	width: 850px;
+	height: 95px;
+	z-index: 2;
+	left: 135px;
+	top: 10px;
+	color: #FFF;
+}
+#apDiv155 {
+	position: absolute;
+	width: 1000px;
+	height: 215px;
+	z-index: 12;
+	left: 0px;
+	top: 1240px;
+	background-color: #004A34;
+}
+#apDiv156 {
+	position: absolute;
+	width: 980px;
+	height: 195px;
+	z-index: 1;
+	left: 10px;
+	top: 10px;
+	color: #FFF;
+}
+#apDiv157 {
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	z-index: 4;
+	left: 464px;
+	top: 1680px;
+}
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+</head>
+
+<body>
+<div id="apDiv1">
+  <div id="apDiv192"></div>
+</div>
+<div id="apDiv6">
+  <div id="apDiv7">
+    <div id="apDiv9">
+      <div id="apDiv131">Instalación NVIDIA drivers</div>
+      <div id="apDiv137"><img src="imagenes/i-vc.png" width="75" height="75" /></div>
+      <div id="apDiv132">
+        <div id="apDiv138">
+          <div id="apDiv139">
+            <div id="apDiv140"><img src="imagenes/alerta_1.png" alt="" width="75" height="75" /></div>
+            <div id="apDiv141">Recuerdá que los controladores &quot;propietarios&quot; así como los &quot;firmwares&quot; originales de algunos dispositivos de hardware, no son &quot;software libre&quot;, lo cual puede afectar la privacidad y seguridad del sistema.</div>
+          </div>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div id="apDiv152">
+          <div id="apDiv153"><img src="imagenes/alerta_1.png" width="72" height="72" /></div>
+          <div id="apDiv154">Es muy importante que tengas en cuenta que si tu placa de video Nvidia funciona bien con los &quot;drivers libres&quot; nouveau, no te aconsejo, ya que no es necesario, instalar los drivers nvidia privativos, salvo que uses algún software que pueda requerir características de configuración especial de la GPU como juegos, soft de animación 3D o si instalás &quot;Steam&quot;.</div>
+        </div>
+        <p>&nbsp;</p>
+        <div id="apDiv149">
+          <p><span lang="es" xml:lang="es"><span title=""><em>Si decidís instalar los drivers privativos vas a tener que habilitar los repositorios &quot;contrib&quot; y &quot;non-free&quot;; para ello, si estás usando los repos libres &quot;main&quot;, abrí la consola y logueado como &quot;root&quot; ejecuta el script para habilitarlos escribiendo &quot;<strong>nonfree</strong></em></span></span><em>&quot;.</em></p>
+          <p>Habilitados estos repositorios</p>
+          <p>1) En la consola como &quot;root&quot; ejecutá:</p>
+          <p><strong>apt install nvidia-detect</strong></p>
+          <p>2) Una vez instalado, en la misma terminal ejecutá el programa &gt;&gt; <strong>nvidia-detect</strong></p>
+          <p>3) Andá a: Menú &gt; Administración &gt; <strong>Auxtral Settings</strong>, en la pestaña &quot;Device Drivers&quot;, marcá la casilla NVIDIA drivers y presione en &quot;<strong>Save Drivers</strong>&quot;. Esto va a descargar e instalar los controladores NVIDIA propietarios desde los repositorios de Debian.</p>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div id="apDiv150"><strong>Debés reiniciar el sistema para que los cambios surtan efecto.</strong></div>
+        <p>&nbsp;</p>
+        <div id="apDiv155">
+          <div id="apDiv156">
+            <p>NOTA: en caso de que este metodo no te haya funcionado, desde la consola como root ejecutá:</p>
+            <p><strong>/usr/lib/solydxk/ddm-nvidia.sh</strong></p>
+            <p>cuando finalice hacé:</p>
+            <p><strong>apt install nvidia-xconfig</strong> y cuando termine de instalarse ejecutalo &gt;&gt; <strong>nvidia-xconfig</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="apDiv128"><img src="imagenes/auxtral-settings.png" width="800" height="421" /></div>
+    <div id="apDiv157"><a href="../ayuda.html"><img src="imagenes/goback_green.png" width="72" height="72" /></a></div>
+  </div>
+</div>
+</body>
+</html>
