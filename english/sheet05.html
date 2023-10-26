@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+                      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Auxtral GNU/Linux es una distribución basada en Debian 12 Bookworm sin non-free-fermware">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com) - Modificado por Guillermo Sosa para Auxtral">
+	
+	<title>Release of Debian 12 (Bookworm" and Auxtral 4 (Polaris Australis) stable</title>
+
+	<link rel="shortcut icon" href="../assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="../assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png" alt="Progressus HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class=""><a href="index.html">Home</a></li>
+					<li class=""><a href="acerca.html">About</a></li>
+                    <li class=""><a href="descargas.html">Downloads</a></li>
+                    <li class=""><a href="faqs.html">FAQs</a></li>
+                    <li class=""><a href="oldsite/ayuda.html" target="_blank">Help</a></li>
+                    <li><a href="index.html">English</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+    
+    	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+    
+	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-md-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">About Auxtral's latest ISO images</h1>
+				</header>
+				<p>Today (25-10-23) I have uploaded new Auxtral ISO because through the e-mail &quot;auxtral@protonmail.com&quot; users reported errors during the installation of the system. The problem occurred at the end of the process when starting the &quot;grub&quot; installation.<br>
+				</p>
+				<p>The problem is a consequence of the fact that Debian updates its repositories, but not its ISO images, and Auuxtral is built on the original Debian ISO structure. In other words, you download an original Debian LIVE ISO, and among other minor configurations, you replace the original &quot;filesystem.squashfs&quot; file in the /live directory of the original ISO with Auxtral's &quot;filesystem.squashfs&quot;. By the way, it is worth mentioning that all non-free-firmware components from Bookworm are removed from the original ISO by default according to the famous modification of point 5 of the DFSG.<br>
+			  </p>
+				<p>The fix adopted for the problem that was tested among others, and although perhaps not very orthodox, was the editing of the /usr/sbin/bootloader-config file, to which the following line was added:<br>
+			  </p>
+			  <p>DEBIAN_FRONTEND=noninteractive chroot $CHROOT apt-get update<br>
+			  </p>
+				<p>The file now looks like this</p>
+				<p>#!/bin/bash</p>
+                <p>CHROOT=$(mount | grep proc | grep calamares | awk '{print $3}' | sed -e &quot;s#/proc##g&quot;)</p>
+                <p># Set secure permissions for the initramfs if we're configuring<br>
+                  # full-disk-encryption. The initramfs is re-generated later in the<br>
+                  # installation process so we only set the permissions snippet without<br>
+                  # regenerating the initramfs right now:<br>
+                  if [ &quot;$(mount | grep $CHROOT&quot; &quot; | cut -c -16)&quot; = &quot;/dev/mapper/luks&quot; ]; then<br>
+                  echo &quot;UMASK=0077&quot; &gt; $CHROOT/etc/initramfs-tools/conf.d/initramfs-permissions<br>
+                  fi</p>
+                <p>echo &quot;Running bootloader-config...&quot;</p>
+              <p>if [ -d /sys/firmware/efi/efivars ]; then<br>
+                  echo &quot; * Installing grub-efi (uefi)...&quot;<br>
+                  DEBIAN_FRONTEND=noninteractive chroot $CHROOT apt-get -y install grub-efi-amd64 cryptsetup keyutils<br>
+                  else<br>
+                  echo &quot; * install grub... (bios)&quot;<br>
+  <strong>DEBIAN_FRONTEND=noninteractive chroot $CHROOT apt-get update</strong> <em>(Línea agragada)</em><br>
+                  DEBIAN_FRONTEND=noninteractive chroot $CHROOT apt-get -y install grub-pc cryptsetup keyutils<br>
+                  fi</p>
+				<p>&nbsp;</p>
+				<p>This way, the installation (although it takes a bit longer) updates the &quot;pool&quot; and &quot;pool-udev&quot; folders of the ISO, in which the &quot;Calamares&quot; installer searches among other packages for &quot;grub-pc&quot;, which logically is not installed in the live system of the distribution.</p>
+			  <p>As I explained above I don't know if the solution is very orthodox but apparently it works. Also if it can be useful to someone else, welcome.</p>
+				<p>Thank you very much and good life to all of you.                </p>
+				<p>&nbsp;</p>
+                <p>Guillermo Sosa</p>
+                <p>Auxtral..</p>
+				<p>&nbsp;</p>
+			  <p>&nbsp;</p>
+
+				<h2>Read previous entries</h2>
+				<p>&nbsp;</p>
+				<p><a href="sheet01.html">&gt;&gt; INFO MAY 31 of 2023</a></p>
+                <p><a href="sheet02.html">&gt;&gt; INFO JUNE 01 of 2023</a></p>
+                <p><a href="sheet03.html">&gt;&gt; INFO JUNE 06 of 2023</a></p>
+                <p><a href="sheet04.html">&gt;&gt; INFO AUGUST 09 of 2023</a></p>
+          </article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+    
+    <!-- container -->
+    <div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+	  </div>
+</div> <!-- /container -->
+
+    <!-- container -->
+    <div class="container">
+		
+		<ol class="breadcrumb">
+		  <li class="active"></li>
+		</ol>
+
+	  <div class="row">
+			
+			<!-- Sidebar --><!-- /Sidebar -->
+
+			<!-- Article main content --><!-- /Article -->
+
+	  </div>
+</div> <!-- /container -->
+	
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p><br>
+								<a href="mailto:#">auxtral@protonmail.com</a><br>
+								<br>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://twitter.com/auxtralgnulinux" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+								                        <a href="https://t.me/auxtral_gnu_linux" target="_blank"><i class="fa fa-telegram" style='color:#'></i></a></a>
+								<a href=""><i class=#"fa fa-github fa-2"></i></a>
+								<a href="https://www.facebook.com/people/Auxtral-GNULinux/100083144570415/?ref=page_internal" target="_blank"><i class=#"fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Legales</h3>
+						<div class="widget-body">
+							<p><a href="../Terminos.html">Términos y condiciones</a></p>
+							<p><a href="../politicas.html">Políticas de privacidad</a></p>
+							<p><a href="../licencias.html">Licencias</a></p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="../index.html">Home</a> | 
+								<a href="../acerca.html">Acerca</a> |
+								<a href="../descargas.html">Desacrgas</a> |
+								<a href="../faqs.html">FAQs </a>|
+								<a href="../oldsite/ayuda.html" target="_blank">Ayuda</a>
+							|
+							<a href="index.html">English</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2014,. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="../assets/js/headroom.min.js"></script>
+	<script src="../assets/js/jQuery.headroom.min.js"></script>
+	<script src="../assets/js/template.js"></script>
+</body>
+</html>
